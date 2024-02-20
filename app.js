@@ -107,7 +107,33 @@ app.get('/magic8', (req, res) => {
         const randomIndex = Math.floor(Math.random() * magic8Responses.length);
         return magic8Responses[randomIndex];
     };
-    res.send(`<h1>${magic()}</h1>`);
+    res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Magic 8 Ball Response</title>
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Courier;
+            }
+            h1 {
+                text-align: center;
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>${magic()}</h1>
+    </body>
+    </html>
+    `);
 });
 
 
