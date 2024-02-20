@@ -1,8 +1,17 @@
-const express = require('express')
+const express = require('express');
 const app = express();
 
 
 //creating the route using http method get (first argument) and what the app should do when getting that request is the second argument in next line (callback fx with 2 parameters for request and response)
+app.get('/',(req,res)=>{
+    res.send('Hello World')
+});
+
+app.get('/terminator', (req, res) => {
+    res.send('I\'ll be back'); // or "I'll be back"
+})
+
+// const catchPhrases =
 
 
 // ---- Listening for URL res/req on Port ----
