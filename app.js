@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+// Serve static files from the "public" directory
+app.use(express.static('public'));
 
 //creating the route using http method get (first argument) and what the app should do when getting that request is the second argument in next line (callback fx with 2 parameters for request and response)
 app.get('/',(req,res)=>{
@@ -37,7 +39,7 @@ const catchPhrases = {
 
 // error - can only send one response at a time (the first one)
 app.get('/terminator', (req, res) => {
-    res.send(catchPhrases.Terminator[0]); // or "I'll be back"
+    res.send(catchPhrases.Terminator[0]);
     res.send(catchPhrases.Terminator[1]);
 })
 
@@ -79,7 +81,6 @@ app.get('/Zeus', (req, res) => {
 
 // ---- Magic 8-ball ----
 
-
 const magic8Responses = [
     "It is certain",
     "It is decidedly so",
@@ -114,20 +115,7 @@ app.get('/magic8', (req, res) => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Magic 8 Ball Response</title>
-        <style>
-            body, html {
-                height: 100%;
-                margin: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-family: Courier;
-            }
-            h1 {
-                text-align: center;
-                font-size: 2em;
-            }
-        </style>
+        <link rel="stylesheet" href="/style.css">
     </head>
     <body>
         <h1>${magic()}</h1>
@@ -135,7 +123,6 @@ app.get('/magic8', (req, res) => {
     </html>
     `);
 });
-
 
 // ---- Listening for URL res/req on Port ----
 const PORT = process.env.PORT || 3003; // saves PORT to a variable so we can use in a callback fx in next lines that also outputs a message to the console for user; however installing nodemon and running nodemon app.js in the terminal shows us a message to let us know the port is listening for requests / responses and updates as this server gets updated 

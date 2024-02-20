@@ -1,0 +1,16 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Courier;
+    background-color: rgba(0, 0, 0, 1);
+}
+h1 {
+    background: rgba(255, 255, 255, 0.629);
+    text-align: center;
+    font-size: 2rem;
+    padding: 1%;
+    border-radius: 1rem;
+}
