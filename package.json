@@ -1,0 +1,28 @@
+{
+  "name": "lab-intro-to-express-response",
+  "version": "1.0.0",
+  "description": "## Getting Started",
+  "main": "server.js",
+  "scripts": {
+    "test dev": "jest nodemon app.js"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isiahArrufat/lab-intro-to-express-response.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isiahArrufat/lab-intro-to-express-response/issues"
+  },
+  "homepage": "https://github.com/isiahArrufat/lab-intro-to-express-response#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
