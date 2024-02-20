@@ -70,10 +70,13 @@ app.get("/james-bond", (req, res) => {
 });
 
 const magic8Answer = (array) => {
-  const random = Math.floor(Math.random() * array.length + 1);
+  const random = Math.floor(Math.random() * array.length);
   const answer = array[random];
   return answer;
 };
+
+console.log(magic8Answer(magic8Responses));
+console.log(magic8Responses);
 magic8Answer(magic8Responses);
 app.get("/magic", (req, res) => {
   res.send(`<h1>Answer: ${magic8Answer(magic8Responses)}</h1>`);
