@@ -3,11 +3,11 @@ const express = require('express');
 const app = express();
 
 // Serve static files from the "public" directory
-app.use(express.static('public')); //
+app.use(express.static('public'));
 
 // creating the route using http method get (first argument) and what the app should do when getting that request is the second argument in next line (callback fx with 2 parameters for request and response)
 app.get('/',(req,res)=>{
-    res.send('Hello World')
+    res.send(`<header><h1>Hello, World</h1><h1><a href="/magic8">Magic 8 Ball</a></h1></header>`)
 });
 
 const catchPhrases = {
