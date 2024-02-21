@@ -1,9 +1,16 @@
-### Thought questions
+# Intro to Express lab
 
-1. What characters are allowed in a URL?
+**Thought questions**
+
+1. What characters are allowed in a URL? 
+    URLs can only be sent over the internet using the ASCII character-set. URLs can't contain spaces; characters allowed are alphanumeric characters, and special characters reserved for specific purposes like "%".
 2. What happens if you try to create a URL /tim gunn
+    When you try to create a URL with a space, such as /tim gunn, the space character is not allowed directly in URLs because it is considered unsafe. It needs to be encoded. Spaces in URLs are typically replaced with %20 or +. So, /tim gunn would be encoded as /tim%20gunn or /tim+gunn for the URL to be valid and correctly interpreted by web servers.
 3. Is there a difference between /timgunn and /TimGunn and /tim/gunn?
+    Yes, URLs are case sensitive, but it depends on the web server's configuration. The /tim/gunn URL has an additional slash which suggests a hierarchical structure
+    where gunn is a resource tim contains
 4. If you have a phrase like Here's looking at you, kid, how do you deal with the ' in Here's?
+    For phrases like "Here's looking at you, kid" that include an apostrophe, the apostrophe also needs to be encoded for the URL. The apostrophe (') is encoded as %27. So, in a URL, the phrase would be encoded as Here%27s%20looking%20at%20you%2C%20kid. This ensures that the URL is valid and can be properly processed by web servers and browsers
 
 ### HTTP protocol and send req / res errors
 
