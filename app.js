@@ -1,4 +1,5 @@
 const express = require('express');
+
 const app = express();
 
 // Serve static files from the "public" directory
@@ -40,7 +41,7 @@ const catchPhrases = {
 // error - can only send one response at a time (the first one)
 app.get('/terminator', (req, res) => {
     res.send(catchPhrases.Terminator[0]);
-    res.send(catchPhrases.Terminator[1]);
+    // res.send(catchPhrases.Terminator[1]);
 })
 
 app.get('/Jack-Dawson', (req, res) => {
@@ -132,5 +133,5 @@ app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}...`)
 })
 // --- part of the bonus ---
-// EXPORT
-module.exports = app
+// for test to run: we want app from the app.js file exported.
+module.exports = app;
