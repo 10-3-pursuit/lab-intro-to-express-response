@@ -2,7 +2,7 @@
   "name": "lab-intro-to-express-response",
   "version": "1.0.0",
   "description": "lab to introduce express",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest"
   },
