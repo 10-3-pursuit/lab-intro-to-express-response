@@ -10,6 +10,11 @@ app.get('/',(req,res)=>{
     res.status(200).send(`<header><h1>Hello, World</h1><h1><a href="/magic8">Magic 8 Ball</a></h1></header>`) // status 200 for okay (part of header)
 });
 
+// --- part of the Bonus ---
+// app.get('/',(req,res)=>{
+//     res.status(418).send(`<img alt="teapot" src="https://http.cat/images/418.jpg"/>`)
+// });
+
 const catchPhrases = {
     "Emeril": "Bam!",
     "SteveMcGarrett": "Book 'em Danno!",

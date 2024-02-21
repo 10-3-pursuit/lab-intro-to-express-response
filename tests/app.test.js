@@ -13,3 +13,13 @@ describe('Test the root path', () => {
             }); // testing app.get with the "/" path. Output to the webpage from fx in app.js
         });
 });
+
+// describe("Test the root path", () => {
+//     test("It should response the GET method", () => {
+//       return supertest(app)
+//         .get("/")
+//         .then(response => {
+//           expect(response.statusCode).toBe(418)
+//         })
+//     })
+// })
