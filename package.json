@@ -2,9 +2,9 @@
   "name": "lab-intro-to-express-response",
   "version": "1.0.0",
   "description": "## Getting Started",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "nodemon app.js"
   },
   "repository": {
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/iris-beckham/lab-intro-to-express-response#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
   }
 }

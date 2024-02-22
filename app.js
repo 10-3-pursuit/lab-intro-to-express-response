@@ -3,13 +3,7 @@ const express = require('express')
 const app = express()
 
 app.get('/', (request, response) => {
-    response.send('Hello there')
-})
-
-const PORT = process.env.PORT || 3003;
-
-app.listen(PORT, () => {
-    console.log(`Listening for requests on port ${PORT}`)
+    response.status(418).send('Hello there')
 })
 
 app.get('/terminator', (req, res) => {
@@ -76,3 +70,5 @@ const magic8Responses = [
 app.get('/magic8', (req, res) => {
     res.send(`<h1>${magic8Responses[Math.floor(magic8Responses.length * Math.random())]}</h1>`)
 })
+
+module.exports = app
